@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 80
   config.vm.network "forwarded_port", guest: 443, host: 443
   config.vm.provision "file", source: "docker-compose.yml", destination: "docker-compose.yml"
+  config.vm.provision "file", source: ".env", destination: ".env"
   config.vm.provision "shell", path: "provision/docker.sh"
   config.vm.provision "shell", path: "provision/otg-stack.sh"
 end

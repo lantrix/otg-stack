@@ -12,4 +12,4 @@ services:
       - /usr/local/dockercerts:/etc/nginx/certs:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
     environment:
-      - VIRTUAL_PORT=8888
+      - VIRTUAL_PORT=${VIRTUAL_PORT}
