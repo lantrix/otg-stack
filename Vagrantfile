@@ -15,6 +15,6 @@ Vagrant.configure("2") do |config|
     apt-get -y update
     apt-get -y install docker-ce
     apt-get -y install docker-compose
-    docker-compose up
+    docker-compose up -d
   SHELL
 end
